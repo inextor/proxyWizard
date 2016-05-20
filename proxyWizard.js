@@ -21,6 +21,16 @@ var bannedFile	= 'data/'+dateArray.join('')+'.json';
 dateArray.push( twoDigits( date.getHours() ) );
 var hourFile	= 'data/'+dateArray.join('')+'.json';
 
+
+
+var dir = './data';
+
+if (!fs.existsSync( dir ))
+{
+   fs.mkdirSync( dir );
+}
+
+
 function getDefaultHeaders()
 {
 	return {
